@@ -30,6 +30,10 @@ dependencies = [
     "numpy>=2.3.2; python_version >= '3.14'",
     "scikit-learn>=1.5.2",
     "scikit-learn>=1.7.2; python_version >= '3.14'",
+    "ipykernel>=7.1.0",
+    "qiskit-aer>=0.17.2",
+    "matplotlib>=3.10.8",
+    "pylatexenc>=2.10",
 ]
 
 classifiers = [
@@ -130,14 +134,14 @@ filterwarnings = [
 
 [tool.coverage]
 run.source = ["mqt.bench"]
+run.disable_warnings = [
+    "no-sysmon",
+]
 report.exclude_also = [
     '\.\.\.',
     'if TYPE_CHECKING:',
     'raise AssertionError',
     'raise NotImplementedError',
-]
-run.disable_warnings = [
-    "no-sysmon",
 ]
 show_missing = true
 skip_empty = true
